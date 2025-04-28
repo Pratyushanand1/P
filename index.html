@@ -6,6 +6,20 @@
   <title>Pratyush Anand | Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+<!-- Loading Screen -->
+<div id="loading-screen" style="position: fixed; width: 100%; height: 100%; background: #0b1a27; display: flex; align-items: center; justify-content: center; z-index: 9999;">
+  <dotlottie-player 
+    src="https://lottie.host/bcd13e98-9d3c-49ff-b388-f5107400f32f/6Y3UG3RUQv.lottie" 
+    background="transparent" 
+    speed="1" 
+    style="width: 300px; height: 300px" 
+    loop 
+    autoplay>
+  </dotlottie-player>
+</div>
+
 <body>
   <header>
     <div class="container">
@@ -86,5 +100,6 @@
   </footer>
 
   <script src="script.js"></script>
+  
 </body>
 </html>
