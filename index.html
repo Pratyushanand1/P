@@ -4,23 +4,153 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pratyush Anand | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 
-<!-- Loading Screen -->
-<div id="loading-screen" style="position: fixed; width: 100%; height: 100%; background: #0b1a27; display: flex; align-items: center; justify-content: center; z-index: 9999;">
-  <dotlottie-player 
-    src="https://lottie.host/bcd13e98-9d3c-49ff-b388-f5107400f32f/6Y3UG3RUQv.lottie" 
-    background="transparent" 
-    speed="1" 
-    style="width: 300px; height: 300px" 
-    loop 
-    autoplay>
-  </dotlottie-player>
-</div>
+  <!-- Google Fonts (Poppins) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome for social icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- AOS Library for Scroll Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- DotLottie Player -->
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+  <style>
+    /* Default Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(90deg, #0F2027, #203A43, #2C5364);
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00ffff;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #2C5364;
+    }
+
+    .projects-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .project-card {
+      background: #2C5364;
+      color: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      width: 300px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .contact-icons {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .contact-icons a {
+      color: #2C5364;
+      font-size: 2rem;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      background: #203A43;
+      color: white;
+      margin-top: 2rem;
+    }
+
+    /* Loading Screen */
+    #loading-screen {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: #0b1a27;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .projects-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
 
 <body>
+  
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <dotlottie-player 
+      src="https://lottie.host/bcd13e98-9d3c-49ff-b388-f5107400f32f/6Y3UG3RUQv.lottie" 
+      background="transparent" 
+      speed="1" 
+      style="width: 300px; height: 300px" 
+      loop 
+      autoplay>
+    </dotlottie-player>
+  </div>
+
   <header>
     <div class="container">
       <h1>Pratyush Anand | Portfolio</h1>
@@ -28,69 +158,69 @@
         <a href="#about">About</a>
         <a href="https://github.com/Pratyushanand1" target="_blank">Github</a>
         <a href="#contact">Contact</a>
-        <a href="https://www.linkedin.com/in/pratyush-anand-b12799306/" target="_blank">Linkedin</a>
-       </a>
-       
+        <a href="https://www.linkedin.com/in/pratyush-anand-b12799306/" target="_blank">LinkedIn</a>
       </nav>
     </div>
   </header>
 
-  <section id="about" class="container">
-    <h2>About </h2>
-    <p>Hello! I'm Pratyush Anand , a passionate software devloper aspirant at Kalinga Institute of Industrial Technology with proficiency in JAVA, C++ and python. I have worked on various projects ranging from devlopment to machine learning 
-        During my acadmic carrer I have secured 90% in Algorithm lab, computer Networking lab and Artifical Intellegence lab.Here are few of my projects for more checkout my Github Profile . <p>Currently I am looking for opertunities in software devlopment and machine learning feild.
-    </p>
+  <section id="about" class="container" data-aos="fade-up">
+    <h2>About</h2>
+    <p>Hello! I'm Pratyush Anand, a passionate software developer aspirant at Kalinga Institute of Industrial Technology with proficiency in JAVA, C++ and Python. I have worked on various projects ranging from development to machine learning. 
+    During my academic career, I have secured 90% in Algorithm lab, Computer Networking lab, and Artificial Intelligence lab. Here are a few of my projects; for more, checkout my GitHub profile.</p>
+    <p>Currently, I am looking for opportunities in software development and machine learning fields.</p>
   </section>
 
-  <section id="projects" class="container">
+  <section id="projects" class="container" data-aos="fade-up">
     <h2>Projects</h2>
     <div class="projects-container">
-        <div class="project-card">
-          
-          <a href="https://github.com/Pratyushanand1/Web-Browser.git" target="_blank" style="text-decoration: none; color: inherit;">
-            Web-Browser 🛜
+      
+      <div class="project-card">
+        <a href="https://github.com/Pratyushanand1/Web-Browser.git" target="_blank" style="text-decoration: none; color: inherit;">
+          <h3>Web-Browser 🛜</h3>
+          <ul>
+            <li>Tech Stack: Python, PyQt5, QtWebEngine</li>
+            <li>Fully functional browser with tabbed browsing, bookmarks, custom search</li>
+            <li>Clean UI with navigational controls (back, forward, reload)</li>
+            <li>Security: Sandboxing URLs and safe-browsing features</li>
+          </ul>
         </a>
-            <ul>
-              <li>Tech Stack: Python, PyQt5, QtWebEngine</li>
-              <li>Fully functional browser with tabbed browsing, bookmarks, custom search</li>
-              <li>Clean UI with navigational controls (back, forward, reload)</li>
-              <li>Security: Sandboxing URLs and safe-browsing features</li>
-            </ul>
-          </a>
-        </div>
-      
-        <div class="project-card">
-          <a href="https://github.com/Pratyushanand1/Sunday.git" target="_blank" style="text-decoration: none; color: inherit;">
-            AI Chat Bot like JARVIS 🤖
-            <ul>
-              <li>Tech Stack: Python, SpeechRecognition, OpenAI GPT, pyttsx3</li>
-              <li>Built a voice-activated assistant capable of handling tasks like web search, opening apps,
-                sendingemails, and answering questions using</li>
-              <li>OpenAI's GPT.Integrated speech-to-text and text-to-speech libraries for full duplex
-                communication</li>
-              <li>Enabled smart task automation via voice commands</li>
-            </ul>
-          </a>
-        </div>
-      
-        <div class="project-card">
-          <a href="https://github.com/Pratyushanand1/mini-project" target="_blank" style="text-decoration: none; color: inherit;">
-            Fake-Job Dectector ⚒️
-            <ul>
-              <li>Tech Stack: Python, Scikit-learn, Pandas, Flask</li>
-              <li>FlaskBuilt a machine learning model to detect fraudulent job postings based on textual patterns andmetadata</li>
-              <li>Achieved over 90% accuracy using Random Forest Classifier after cleaning and vectorizing data</li>
-              <li>Deployed the model using Flask for real-time predictions via a web interface</li>
-            </ul>
-          </a>
-        </div>
       </div>
-      
+
+      <div class="project-card">
+        <a href="https://github.com/Pratyushanand1/Sunday.git" target="_blank" style="text-decoration: none; color: inherit;">
+          <h3>AI Chat Bot like JARVIS 🤖</h3>
+          <ul>
+            <li>Tech Stack: Python, SpeechRecognition, OpenAI GPT, pyttsx3</li>
+            <li>Voice-activated assistant for web search, opening apps, sending emails, and answering questions</li>
+            <li>Integrated speech-to-text and text-to-speech for full duplex communication</li>
+            <li>Smart task automation via voice commands</li>
+          </ul>
+        </a>
+      </div>
+
+      <div class="project-card">
+        <a href="https://github.com/Pratyushanand1/mini-project" target="_blank" style="text-decoration: none; color: inherit;">
+          <h3>Fake-Job Detector ⚒️</h3>
+          <ul>
+            <li>Tech Stack: Python, Scikit-learn, Pandas, Flask</li>
+            <li>ML model to detect fraudulent job postings based on textual patterns and metadata</li>
+            <li>Achieved 90% accuracy using Random Forest Classifier</li>
+            <li>Deployed model with Flask for real-time web predictions</li>
+          </ul>
+        </a>
+      </div>
+
+    </div>
   </section>
 
-  <section id="contact" class="container">
+  <section id="contact" class="container" data-aos="fade-up">
     <h2>Contact Me</h2>
     <p>Let's connect! Email me at <a href="mailto:pratyushanand205@gmail.com">pratyushanand205@gmail.com</a></p>
+    <div class="contact-icons">
+      <a href="https://github.com/Pratyushanand1" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/pratyush-anand-b12799306/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:pratyushanand205@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
   </section>
 
   <footer>
@@ -99,7 +229,32 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
-  
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    // Smooth Scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Loading screen fade-out
+    window.addEventListener('load', () => {
+      const loadingScreen = document.getElementById('loading-screen');
+      loadingScreen.style.opacity = '0';
+      setTimeout(() => {
+        loadingScreen.style.display = 'none';
+      }, 500);
+    });
+
+    // Initialize AOS
+    AOS.init();
+  </script>
+
 </body>
 </html>
