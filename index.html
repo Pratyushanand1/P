@@ -126,6 +126,140 @@
       z-index: 9999;
       transition: opacity 0.5s ease;
     }
+    #certifications {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+.certifications-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.certifications-list li {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.certifications-list a {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.certifications-list a:hover {
+  color: #0056b3;
+}
+.certifications-list li {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.certifications-list li:hover {
+  background-color: #e6f2ff;
+  transform: scale(1.02);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.certifications-list a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.certifications-list a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+  font-weight: 600;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.2);
+}
+
+.contact-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+  transform: scale(1.03);
+}
+
+
 
     /* Responsive */
     @media (max-width: 768px) {
@@ -169,6 +303,24 @@
     During my academic career, I have secured 90% in Algorithm lab, Computer Networking lab, and Artificial Intelligence lab. Here are a few of my projects; for more, checkout my GitHub profile.</p>
     <p>Currently, I am looking for opportunities in software development and machine learning fields.</p>
   </section>
+  <section id="certifications" class="container">
+    <h2>Certifications</h2>
+    <ul class="certifications-list">
+      <li>
+        <strong>JAVA</strong> – HackerRank  
+        <br><a href="https://www.hackerrank.com/certificates/c4014d6947e6" target="_blank">View Certificate</a>
+      </li>
+      <li>
+        <strong>Accenture UK - Developer and Technology Job Simulation </strong> – Accenture (Forage)
+        <br><a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ovyvuqqNRQKBjNxbj/3xnZEj9kfpoQKW885_ovyvuqqNRQKBjNxbj_Nd2goLRBWNaoFxe4t_1735838020524_completion_certificate.pdf" target="_blank">View Certificate</a>
+      </li>
+      <li>
+        <strong>AWS APAC - Solutions Architecture Job Simulation</strong> – Amazon (Forage)
+        <br><a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_Nd2goLRBWNaoFxe4t_1735841793026_completion_certificate.pdf" target="_blank">View Certificate</a>
+      </li>
+    </ul>
+  </section>
+  
 
   <section id="projects" class="container" data-aos="fade-up">
     <h2>Projects</h2>
@@ -213,15 +365,25 @@
     </div>
   </section>
 
-  <section id="contact" class="container" data-aos="fade-up">
-    <h2>Contact Me</h2>
-    <p>Let's connect! Email me at <a href="mailto:pratyushanand205@gmail.com">pratyushanand205@gmail.com</a></p>
-    <div class="contact-icons">
-      <a href="https://github.com/Pratyushanand1" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/pratyush-anand-b12799306/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:pratyushanand205@gmail.com"><i class="fas fa-envelope"></i></a>
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Get in Touch</h2>
+      <form class="contact-form" action="https://formspree.io/f/mwkgrwdo" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+  
+        <label for="email">Email</label>
+        <input type="email" id="email" name="_replyto" placeholder="Your Email" required>
+  
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+  
+        <button type="submit">Send Message</button>
+      </form>
     </div>
   </section>
+  
+  
 
   <footer>
     <div class="container">
